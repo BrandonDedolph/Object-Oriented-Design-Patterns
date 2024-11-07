@@ -1,12 +1,8 @@
-from concrete_builder import GamingComputerBuilder, OfficeComputerBuilder
-from director import ComputerDirector
+from data_fetcher_builder import DataFetcherBuilder
 
-gaming_builder = GamingComputerBuilder()
-director = ComputerDirector(gaming_builder)
-gaming_computer = director.construct_computer()
-print(gaming_computer)
+data_fetcher = (DataFetcherBuilder("users")
+                .limited_by(10)
+                .ordered_by("username")
+                .create())
 
-office_builder = OfficeComputerBuilder()
-director = ComputerDirector(office_builder)
-office_computer = director.construct_computer()
-print(office_computer)
+print(data_fetcher)
