@@ -1,0 +1,1 @@
+The Prototype Design Pattern is a creational pattern that allows cloning objects by copying an existing instance instead of creating new ones from scratch. It enables adding or modifying properties of the copied object without affecting the original instance.
